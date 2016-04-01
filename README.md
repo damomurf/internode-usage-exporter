@@ -1,5 +1,7 @@
 # internode-usage-exporter
 
+![Grafana Screenshot](./docs/screenshot.png)
+
 
 ## Configuration
 
