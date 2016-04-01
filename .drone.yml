@@ -1,0 +1,17 @@
+build:
+  image: golang:1.6
+  commands:
+    - go get github.com/constabulary/gb/...
+    - CGO_ENABLED=0 $GOPATH/bin/gb build -ldflags '-s' all
+
+publish:
+  docker:
+    registry: quay.io
+    username: $$QUAY_USERNAME
+    password: $$QUAY_TOKEN
+    email: $$QUAY_EMAIL
+    repo: damomurf/internode-usage-exporter
+    tag:
+      - latest
+      - "$$BUILD_NUMBER"
+    storage_driver: overlay
