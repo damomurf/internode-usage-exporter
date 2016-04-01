@@ -1,4 +1,4 @@
-FROM golang:1.6-alpine
+FROM centurylink/ca-certs
 MAINTAINER damian@murf.org
 
 COPY ./bin/internode-usage-exporter /
