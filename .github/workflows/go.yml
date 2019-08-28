@@ -26,5 +26,5 @@ jobs:
 
     - name: Build
       run: |
-        export GOPATH=src
+        export GOPATH=$(pwd)/src
         go build -v git.murf.org/internode/cmd/...
