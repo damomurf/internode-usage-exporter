@@ -25,4 +25,6 @@ jobs:
         fi
 
     - name: Build
-      run: go build -v .
+      run: |
+        export GOPATH=src
+        go build -v git.murf.org/internode/cmd/...
